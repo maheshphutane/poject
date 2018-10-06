@@ -1,11 +1,11 @@
-#include"dos.h"
-#include"graphics.h"
+#include<dos.h>
+#include<graphics.h>
 #include<stdio.h>
 #include<conio.h>
 #include<process.h>
 #include<dos.h>
 #include<stdlib.h>
-#include<iostream.h>
+//#include<iostream.h>
  union REGS i,o;
 void main()
  {
@@ -44,10 +44,10 @@ void main()
   int level=0;
   char name[40];
   gotoxy(5,2);
-  cout<<"PLEASE ENTER YOUR NAME::-";
+  printf("PLEASE ENTER YOUR NAME::-");
   gets(name);
   gotoxy(5,2);
-  cout<<" ";
+  printf(" ");
 
 
   while(!kbhit())
@@ -66,7 +66,7 @@ void main()
 	      score+=10;
 	      gotoxy(320,2);
 	      textcolor(13);
-	      cout<<"your score: "<<score;
+	      printf("your score:-%d",score);
 
 	    }
 	}
@@ -75,12 +75,12 @@ void main()
 	b=0;
 	a=random(getmaxx());
 	gotoxy(10,2);
-	cout<<"eggs left: "<<count;
+	printf("eggs left: %d",count);
 	count--;
 	if(count==-1)
 	  {
 	   gotoxy(32,10);
-	   cout<<"LEVEL COMPLETED.";
+	   printf("LEVEL COMPLETED.");
 	   level++;
 	   if(level==4)
 	   {
@@ -90,7 +90,7 @@ void main()
 	   s++;
 	   getch();
 	   gotoxy(32,10);
-	  cout<<"                ";
+	  printf("                ");
 	  }
        }
        setcolor(10);
@@ -111,17 +111,17 @@ void main()
      }
     mahesh:
     gotoxy(30,12);
-    cout<<"EXCELLENT WORK "<<name;
+    printf("EXCELLENT WORK %s",name);
     gotoxy(33,15);
-    cout<<"GAME OVER.   ";
+    printf("GAME OVER.   ");
     gotoxy(32,18);
-    cout<<"YOUR SCORE:"<<score;
+    printf("YOUR SCORE:-%d",score);
     gotoxy(58,24);
-    cout<<"COMPOSED BY:";
+    printf("COMPOSED BY:--");
     gotoxy(55,25);
-    cout<<"Mahesh,Vinayak,Adarsh,Rohit";
-    gotoxy(30,10);
-    cout<<"GREATEST SCORE::"<< 540;
+    printf("Mahesh,Vinayak,Adarsh,Rohit");
+    gotoxy(25,10);
+    printf("GREATEST SCORE:: is 540");
 
 
     getch();
